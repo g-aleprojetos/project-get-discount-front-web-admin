@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import manutencao from 'assets/image/manutencao.svg';
 import * as S from './home.styles';
