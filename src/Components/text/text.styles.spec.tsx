@@ -77,4 +77,16 @@ describe('Text.styles', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  test('Texto "P" DEVE ter o marginTop como "32" QUANDO for passado "32" no marginTop da props', () => {
+    const container = renderer.create(<Texto.P marginTop={32} />).toJSON();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Texto "P" DEVE ter o peso como "bold" QUANDO for passado "bold" no peso da props', () => {
+    const container = renderer.create(<Texto.P peso="bold" />).toJSON();
+
+    expect(container).toMatchSnapshot();
+  });
 });

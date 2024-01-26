@@ -3,6 +3,7 @@
 exports[`Text.styles Texto "H1" DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -17,6 +18,7 @@ exports[`Text.styles Texto "H1" DEVE ser igual ao snapshot 1`] = `
 exports[`Text.styles Texto "H2" DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -31,6 +33,7 @@ exports[`Text.styles Texto "H2" DEVE ser igual ao snapshot 1`] = `
 exports[`Text.styles Texto "H3" DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -45,6 +48,7 @@ exports[`Text.styles Texto "H3" DEVE ser igual ao snapshot 1`] = `
 exports[`Text.styles Texto "H4" DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -59,6 +63,7 @@ exports[`Text.styles Texto "H4" DEVE ser igual ao snapshot 1`] = `
 exports[`Text.styles Texto "H5" DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -73,6 +78,7 @@ exports[`Text.styles Texto "H5" DEVE ser igual ao snapshot 1`] = `
 exports[`Text.styles Texto "H6" DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -87,6 +93,7 @@ exports[`Text.styles Texto "H6" DEVE ser igual ao snapshot 1`] = `
 exports[`Text.styles Texto "P" DEVE estar com o texto em "uppercase" QUANDO for passado pelo props 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: uppercase;
@@ -101,6 +108,7 @@ exports[`Text.styles Texto "P" DEVE estar com o texto em "uppercase" QUANDO for 
 exports[`Text.styles Texto "P" DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -115,6 +123,7 @@ exports[`Text.styles Texto "P" DEVE ser igual ao snapshot 1`] = `
 exports[`Text.styles Texto "P" DEVE ter a cor #ff0000 QUANDO for passada pelo props 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ff0000;
   margin-top: 0px;
   text-transform: none;
@@ -129,6 +138,7 @@ exports[`Text.styles Texto "P" DEVE ter a cor #ff0000 QUANDO for passada pelo pr
 exports[`Text.styles Texto "P" DEVE ter o cursor como "default" QUANDO for passado "default" no cursor da props 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -144,6 +154,7 @@ exports[`Text.styles Texto "P" DEVE ter o cursor como "default" QUANDO for passa
 exports[`Text.styles Texto "P" DEVE ter o cursor como "pointer" QUANDO for passado "pointer" no cursor da props 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -159,6 +170,7 @@ exports[`Text.styles Texto "P" DEVE ter o cursor como "pointer" QUANDO for passa
 exports[`Text.styles Texto "P" DEVE ter o fontSize como "32" QUANDO for passado "32" no fontSize da props 1`] = `
 .c0 {
   font-size: 32px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -168,5 +180,35 @@ exports[`Text.styles Texto "P" DEVE ter o fontSize como "32" QUANDO for passado 
 <p
   className="c0"
   fontSize="32"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE ter o marginTop como "32" QUANDO for passado "32" no marginTop da props 1`] = `
+.c0 {
+  font-size: 12px;
+  font-family: AvertaStd-Regular;
+  color: #ffffff;
+  margin-top: 32px;
+  text-transform: none;
+  cursor: text;
+}
+
+<p
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE ter o peso como "bold" QUANDO for passado "bold" no peso da props 1`] = `
+.c0 {
+  font-size: 12px;
+  font-family: AvertaStd-Bold;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<p
+  className="c0"
 />
 `;

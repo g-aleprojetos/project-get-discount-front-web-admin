@@ -73,6 +73,7 @@ exports[`LoginPage.styles Main DEVE ser igual ao snapshot 1`] = `
 exports[`LoginPage.styles TextoBotao DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
   text-transform: none;
@@ -88,6 +89,7 @@ exports[`LoginPage.styles TextoBotao DEVE ser igual ao snapshot 1`] = `
 exports[`LoginPage.styles TextoRecuperarSenha DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 12px;
+  font-family: AvertaStd-Regular;
   color: #000000;
   margin-top: 0px;
   text-transform: none;
@@ -103,6 +105,7 @@ exports[`LoginPage.styles TextoRecuperarSenha DEVE ser igual ao snapshot 1`] = `
 exports[`LoginPage.styles TextoTitulo DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 32px;
+  font-family: AvertaStd-Regular;
   color: #3D9DB3;
   margin-top: 0px;
   text-transform: none;
