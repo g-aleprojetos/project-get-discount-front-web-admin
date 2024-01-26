@@ -3,25 +3,51 @@ import cores from 'resources/colors';
 
 export type PropsInput = React.InputHTMLAttributes<HTMLInputElement>;
 
+export const Container = styled.div`
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+`;
+
 export const ContainerInput = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  width: 100%;
 `;
+
+export const ContainerInputBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid ${cores.shuttleGray};
+`;
+
 export const LabelBox = styled.label`
   margin-left: 10px;
   font-size: 12px;
-  text-transform: uppercase;
-  color: ${cores.shuttleGray};
+  color: ${cores.blue};
 `;
 
-export const InputBox = styled.input`
+export const Input = styled.input`
+  display: flex;
   height: 30px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  width: 100%;
+  padding: 8px 0;
+  text-indent: 8px;
   font-size: 16px;
-  background-color: ${cores.shuttleGray};
-  color: ${cores.white};
+  border: none;
+  background-color: ${cores.white};
+  color: ${cores.black};
   outline: 0;
+`;
+
+export const MostrarSenha = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  height: 30px;
+  cursor: pointer;
 `;

@@ -16,7 +16,7 @@ export const ContainerButton = styled.button<PropsButton>`
       ? 'transparent'
       : p.tipo === 'cancelar' || p.tipo === 'confirmar' || p.tipo === 'ok'
       ? cores.shuttleGray
-      : cores.caribbeanGreen};
+      : cores.blue};
   border-radius: ${p => (p.tipo === 'fechar' ? 'none' : '8px')};
   border-style: none;
   padding: ${p => (p.tipo === 'fechar' ? 'none' : '8px 60px')};

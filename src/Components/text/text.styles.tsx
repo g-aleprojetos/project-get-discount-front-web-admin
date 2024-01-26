@@ -5,6 +5,7 @@ import cores from 'resources/colors';
 export type Props = {
   id?: string;
   cor?: string;
+  fontSize?: string;
   marginTop?: number;
   children?: string | React.ReactNode;
   peso?: 'bold' | 'medium';
@@ -13,6 +14,7 @@ export type Props = {
 };
 
 const TextoBase = styled.p<Props>`
+  font-size: ${props => props.fontSize ?? '12'}px;
   color: ${props => props.cor ?? cores.white};
   margin-top: ${props => props.marginTop ?? 0}px;
   text-transform: ${props => (props.toUpper ? 'uppercase' : 'none')};

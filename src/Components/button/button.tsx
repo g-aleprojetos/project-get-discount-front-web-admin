@@ -14,7 +14,7 @@ export const Button = (props: Props) => {
   return (
     <S.Container data-testid={testId ?? 'bnt-pardao'}>
       <S.ContainerButton
-        data-testid={`${testId ?? 'bnt-pardao-button'}`}
+        data-testid={`${testId ? testId + '-button' : 'bnt-pardao-button'}`}
         tipo={tipo}
         type={tipo === 'submit' ? 'submit' : 'button'}
         disabled={disabled}

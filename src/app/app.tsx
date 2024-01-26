@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Home} from 'Pages/Home';
+import {LoginPage} from 'Pages/Login';
 
 export const App = () => {
-  return <Home />;
+  return <LoginPage />;
 };

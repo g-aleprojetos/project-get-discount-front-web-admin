@@ -71,4 +71,10 @@ describe('Text.styles', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  test('Texto "P" DEVE ter o fontSize como "32" QUANDO for passado "32" no fontSize da props', () => {
+    const container = renderer.create(<Texto.P fontSize="32" />).toJSON();
+
+    expect(container).toMatchSnapshot();
+  });
 });
