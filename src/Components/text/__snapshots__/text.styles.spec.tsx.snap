@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text.styles Texto "H1" DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<h1
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "H2" DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<h2
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "H3" DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<h3
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "H4" DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<h4
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "H5" DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<h5
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "H6" DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<h6
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE estar com o texto em "uppercase" QUANDO for passado pelo props 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: uppercase;
+  cursor: text;
+}
+
+<p
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<p
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE ter a cor #ff0000 QUANDO for passada pelo props 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ff0000;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<p
+  className="c0"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE ter o cursor como "default" QUANDO for passado "default" no cursor da props 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: default;
+}
+
+<p
+  className="c0"
+  cursor="default"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE ter o cursor como "pointer" QUANDO for passado "pointer" no cursor da props 1`] = `
+.c0 {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: pointer;
+}
+
+<p
+  className="c0"
+  cursor="pointer"
+/>
+`;
+
+exports[`Text.styles Texto "P" DEVE ter o fontSize como "32" QUANDO for passado "32" no fontSize da props 1`] = `
+.c0 {
+  font-size: 32px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+<p
+  className="c0"
+  fontSize="32"
+/>
+`;
