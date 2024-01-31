@@ -9,12 +9,13 @@ type Props = S.PropsButton & {
 };
 
 export const Button = (props: Props) => {
-  const {testId, disabled, tipo, children, aoPressionar} = props;
+  const {testId, disabled, tipo, cor, children, aoPressionar} = props;
 
   return (
     <S.Container data-testid={testId ?? 'bnt-pardao'}>
       <S.ContainerButton
         data-testid={`${testId ? testId + '-button' : 'bnt-pardao-button'}`}
+        cor={cor}
         tipo={tipo}
         type={tipo === 'submit' ? 'submit' : 'button'}
         disabled={disabled}
