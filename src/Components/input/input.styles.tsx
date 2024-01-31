@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import cores from 'resources/colors';
+import colors from 'resources/colors';
+import {TextH4} from 'Components/text';
 
 export type PropsInput = React.InputHTMLAttributes<HTMLInputElement>;
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  margin-top: 20px;
 `;
 
 export const ContainerInput = styled.div`
@@ -21,13 +21,13 @@ export const ContainerInputBox = styled.div`
   justify-content: space-between;
   width: 100%;
   border-radius: 2px;
-  border: 1px solid ${cores.shuttleGray};
+  border: 1px solid ${colors.shuttleGray};
 `;
 
 export const LabelBox = styled.label`
-  margin-left: 10px;
-  font-size: 12px;
-  color: ${cores.blue};
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 `;
 
 export const Input = styled.input`
@@ -38,8 +38,8 @@ export const Input = styled.input`
   text-indent: 8px;
   font-size: 16px;
   border: none;
-  background-color: ${cores.white};
-  color: ${cores.black};
+  background-color: ${colors.white};
+  color: ${colors.black};
   outline: 0;
 `;
 
@@ -51,3 +51,7 @@ export const MostrarSenha = styled.div`
   height: 30px;
   cursor: pointer;
 `;
+
+export const TextoLabel = styled(TextH4).attrs({
+  cursor: 'pointer',
+})``;

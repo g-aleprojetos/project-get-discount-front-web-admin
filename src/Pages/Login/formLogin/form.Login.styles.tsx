@@ -1,19 +1,25 @@
 import styled from 'styled-components';
 import cores from 'resources/colors';
-import {TextH1, TextH2, TextH5} from 'Components/text';
+import {TextH1, TextH2, TextH3} from 'Components/text';
+import sizes from 'resources/sizes';
+import {Button} from 'Components/button';
 
-export interface PropsTelaLoginECadastro
-  extends React.AllHTMLAttributes<HTMLElement> {
-  tela?: 'Login' | 'Password' | 'Singn Up';
-  ativo?: boolean;
-}
+export const BotaoEnviar = styled(Button).attrs({
+  tipo: 'submit',
+})``;
 
-export const BotaoRecuperaSenha = styled.button`
+export const ContainerBotaoRecuperaSenha = styled.button`
   background-color: transparent;
   border: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
   cursor: pointer;
+`;
+
+export const ContainerRecuperarSenha = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: ${sizes.xsmall}px;
 `;
 
 export const Form = styled.form`
@@ -23,28 +29,18 @@ export const Form = styled.form`
   justify-content: center;
   min-width: 400px;
   padding: 20px;
-  gap: 8px;
+  gap: ${sizes.xsmall}px;
   background-color: ${cores.white};
   border-color: ${cores.black};
   border-radius: 20px;
   box-shadow: 0px 30px 80px 3px black;
 `;
 
-export const Main = styled.main`
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${cores.lightgray};
-`;
-
 export const TextoBotao = styled(TextH2).attrs({
   cursor: 'pointer',
 })``;
 
-export const TextoRecuperarSenha = styled(TextH5).attrs({
+export const TextoRecuperarSenha = styled(TextH3).attrs({
   cor: cores.black,
   cursor: 'pointer',
 })``;

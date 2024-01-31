@@ -1,8 +1,9 @@
-import React, {HTMLInputTypeAttribute, useState} from 'react';
+import React, {HTMLInputTypeAttribute, forwardRef, useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 
 import * as S from './input.styles';
+import colors from 'resources/colors';
 
 type EyeIconProps = {
   isVisible: boolean;
@@ -12,23 +13,15 @@ type EyeIconProps = {
 type Props = S.PropsInput & {
   testId?: string;
   label?: string;
+  corlabel?: string;
   value?: string;
   tipo?: HTMLInputTypeAttribute;
   requered?: boolean;
   password?: boolean;
-  handleOnchange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const Input = (props: Props) => {
-  const {
-    testId,
-    label,
-    id,
-    value,
-    tipo = 'text',
-    requered,
-    handleOnchange,
-  } = props;
+export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
+  const {testId, label, tipo = 'text', corlabel = colors.blue} = props;
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const tipoPassword = tipo === 'password';
@@ -41,34 +34,31 @@ export const Input = (props: Props) => {
   return (
     <S.Container>
       <S.ContainerInput data-testid={testId ?? 'input-pardao'}>
-        <S.LabelBox data-testid="input-label" htmlFor={id}>
-          {label}
+        <S.LabelBox data-testid={testId ? testId + '-label' : 'input-label'}>
+          <S.TextoLabel cor={corlabel}>{label}</S.TextoLabel>
+          <S.ContainerInputBox>
+            <S.Input
+              data-testid="input-padrao-box"
+              type={tipoInput}
+              {...props}
+              ref={ref}
+            />
+            {tipoPassword && (
+              <S.MostrarSenha>
+                <EyeIcon
+                  isVisible={mostrarSenha}
+                  toggleVisibility={togglePasswordVisivel}
+                />
+              </S.MostrarSenha>
+            )}
+          </S.ContainerInputBox>
         </S.LabelBox>
-        <S.ContainerInputBox>
-          <S.Input
-            data-testid="input-padrao-box"
-            id={id}
-            type={tipoInput}
-            value={value}
-            required={requered === true ? true : false}
-            onChange={event => {
-              handleOnchange(event);
-            }}
-            {...props}
-          />
-          {tipoPassword && (
-            <S.MostrarSenha>
-              <EyeIcon
-                isVisible={mostrarSenha}
-                toggleVisibility={togglePasswordVisivel}
-              />
-            </S.MostrarSenha>
-          )}
-        </S.ContainerInputBox>
       </S.ContainerInput>
     </S.Container>
   );
-};
+});
+
+Input.displayName = 'Input';
 
 const EyeIcon: React.FC<EyeIconProps> = ({isVisible, toggleVisibility}) => {
   return (

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import cores from 'resources/colors';
+import colors from 'resources/colors';
 
 export interface PropsButton
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   tipo?: 'fechar' | 'cancelar' | 'confirmar' | 'ok' | 'submit';
+  cor?: string;
 }
 
 export const Container = styled.div`
@@ -11,14 +12,16 @@ export const Container = styled.div`
 `;
 
 export const ContainerButton = styled.button<PropsButton>`
-  background-color: ${p =>
-    p.tipo === 'fechar'
-      ? 'transparent'
-      : p.tipo === 'cancelar' || p.tipo === 'confirmar' || p.tipo === 'ok'
-      ? cores.shuttleGray
-      : cores.blue};
-  border-radius: ${p => (p.tipo === 'fechar' ? 'none' : '8px')};
-  border-style: none;
-  padding: ${p => (p.tipo === 'fechar' ? 'none' : '8px 60px')};
+  min-width: 200px;
+  background-color: ${props =>
+    props.cor ||
+    (props.tipo === 'cancelar'
+      ? colors.red
+      : props.tipo === 'confirmar'
+      ? colors.caribbeanGreen
+      : colors.blue)};
+  border-radius: ${props => (props.tipo === 'fechar' ? 'none' : '8px')};
+  border: none;
+  padding: ${props => (props.tipo === 'fechar' ? 'none' : '8px 60px')};
   cursor: pointer;
 `;

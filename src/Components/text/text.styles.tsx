@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import cores from 'resources/colors';
 import fontes from 'resources/fonts';
+import texts from 'resources/texts';
 
 export type Props = {
   id?: string;
   cor?: string;
+  tamanho?: number;
+  alturaDeLinha?: number;
   fontSize?: string;
   marginTop?: number;
   children?: string | React.ReactNode;
@@ -15,12 +18,13 @@ export type Props = {
 };
 
 const TextoBase = styled.p<Props>`
-  font-size: ${props => props.fontSize ?? '12'}px;
+  font-size: ${props => props.tamanho ?? texts.tamanho.xxxsmall}px;
   font-family: ${props =>
     props.peso === 'bold' ? fontes.avertaBold : fontes.avertaRegular};
-  color: ${props => props.cor ?? cores.white};
+  color: ${props => props.cor ?? cores.black};
   margin-top: ${props => props.marginTop ?? 0}px;
   text-transform: ${props => (props.toUpper ? 'uppercase' : 'none')};
+  line-height: ${props => props.alturaDeLinha}px;
   cursor: ${props => props.cursor ?? 'text'};
 `;
 
