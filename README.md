@@ -1,4 +1,4 @@
-<H1 align="center">Project get discount front web admin</H1>
+<H1 align="center">Project Get Discount Front Web Admin</H1>
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 
 <div align="center">
 
-[![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos/setup-react-web/badge.svg?branch=main)](https://coveralls.io/github/g-aleprojetos/setup-react-web?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos/project-get-discount-front-web-admin/badge.svg?branch=main)](https://coveralls.io/github/g-aleprojetos/project-get-discount-front-web-admin?branch=main)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
@@ -34,13 +34,13 @@
 </br></br>
 
 ## Pagina em produção
-### [https://g-aleprojetos.github.io/setup-react-web/](https://g-aleprojetos.github.io/setup-react-web/)
+### [https://g-aleprojetos.github.io/project-get-discount-front-web-admin/](https://g-aleprojetos.github.io/project-get-discount-front-web-admin/)
 
 </br></br>
 ### Clonar projeto
 
 ```shell
-git clone https://github.com/g-aleprojetos/setup-react-web.git
+git clone https://github.com/g-aleprojetos/project-get-discount-front-web-admin.git
 ```
 ### Instala as bibliotecas
 
