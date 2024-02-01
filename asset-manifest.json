@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/setup-react-web/static/css/main.41838c59.css",
-    "main.js": "/setup-react-web/static/js/main.238bcf34.js",
-    "static/media/AvertaStd-Regular.ttf": "/setup-react-web/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
-    "static/media/AvertaStd-Bold.ttf": "/setup-react-web/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
-    "index.html": "/setup-react-web/index.html",
-    "main.41838c59.css.map": "/setup-react-web/static/css/main.41838c59.css.map",
-    "main.238bcf34.js.map": "/setup-react-web/static/js/main.238bcf34.js.map"
+    "main.css": "/project-get-discount-front-web-admin/static/css/main.79d6c9c4.css",
+    "main.js": "/project-get-discount-front-web-admin/static/js/main.cc5389c3.js",
+    "static/media/AvertaStd-Regular.ttf": "/project-get-discount-front-web-admin/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
+    "static/media/AvertaStd-Bold.ttf": "/project-get-discount-front-web-admin/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
+    "index.html": "/project-get-discount-front-web-admin/index.html",
+    "main.79d6c9c4.css.map": "/project-get-discount-front-web-admin/static/css/main.79d6c9c4.css.map",
+    "main.cc5389c3.js.map": "/project-get-discount-front-web-admin/static/js/main.cc5389c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.41838c59.css",
-    "static/js/main.238bcf34.js"
+    "static/css/main.79d6c9c4.css",
+    "static/js/main.cc5389c3.js"
   ]
 }
