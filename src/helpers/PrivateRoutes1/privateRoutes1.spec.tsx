@@ -1,7 +1,7 @@
 import React from 'react';
 import {RenderResult, render, waitFor} from '@testing-library/react';
 import {MemoryRouter as Router, Routes, Route} from 'react-router-dom';
-import {PrivateRoutes} from './privateRoutes';
+import {PrivateRoutes} from './privateRoutes1';
 import {Roles} from 'resources/interfaces';
 import rotas from 'resources/rotas';
 import {useAuthenticatorContext} from 'context/authetication';
