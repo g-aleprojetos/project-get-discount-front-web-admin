@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/project-get-discount-front-web-admin/static/css/main.79d6c9c4.css",
-    "main.js": "/project-get-discount-front-web-admin/static/js/main.cc5389c3.js",
+    "main.js": "/project-get-discount-front-web-admin/static/js/main.6881ef69.js",
+    "static/media/manutencao.svg": "/project-get-discount-front-web-admin/static/media/manutencao.8879956a312017a106a09e808c90eb2a.svg",
     "static/media/AvertaStd-Regular.ttf": "/project-get-discount-front-web-admin/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
     "static/media/AvertaStd-Bold.ttf": "/project-get-discount-front-web-admin/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
+    "static/media/logo.svg": "/project-get-discount-front-web-admin/static/media/logo.5ccfde5d0647d2c6a2763b4f8582bcc7.svg",
     "index.html": "/project-get-discount-front-web-admin/index.html",
     "main.79d6c9c4.css.map": "/project-get-discount-front-web-admin/static/css/main.79d6c9c4.css.map",
-    "main.cc5389c3.js.map": "/project-get-discount-front-web-admin/static/js/main.cc5389c3.js.map"
+    "main.6881ef69.js.map": "/project-get-discount-front-web-admin/static/js/main.6881ef69.js.map"
   },
   "entrypoints": [
     "static/css/main.79d6c9c4.css",
-    "static/js/main.cc5389c3.js"
+    "static/js/main.6881ef69.js"
   ]
 }
