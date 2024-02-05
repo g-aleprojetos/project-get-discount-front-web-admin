@@ -1,6 +1,14 @@
-import * as React from 'react';
-import {LoginPage} from 'Pages/Login';
+import {AutenticadoProvide} from 'context/authetication';
+import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
+import {WebRotas} from 'routes/app.routes';
 
 export const App = () => {
-  return <LoginPage />;
+  return (
+    <AutenticadoProvide>
+      <BrowserRouter>
+        <WebRotas />
+      </BrowserRouter>
+    </AutenticadoProvide>
+  );
 };

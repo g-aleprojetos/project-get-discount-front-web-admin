@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import {fireEvent, render, RenderResult} from '@testing-library/react';
 import {Popup} from '..';
-import iconeCheckSvg from 'assets/icone/check.svg';
+import iconeCheckSvg from 'assets/icon/check.svg';
 import colors from 'resources/colors';
 
 describe('Popup', () => {

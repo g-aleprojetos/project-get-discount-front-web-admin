@@ -3,9 +3,9 @@ import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import manutencao from 'assets/image/manutencao.svg';
-import * as S from '../home.styles';
+import * as S from '../userPage.styles';
 
-describe('Home.styles', () => {
+describe('UserPage.styles', () => {
   test('Container DEVE ser igual ao snapshot', () => {
     const container = renderer.create(<S.Container />).toJSON();
     expect(container).toMatchSnapshot();
