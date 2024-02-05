@@ -11,7 +11,7 @@ export const Nav = (props: Props) => {
   return (
     <S.Container data-testid={'test_nav'}>
       <S.ContainerLogo>
-        <S.Logo />
+        <S.Logo data-testid={'test_logo'} />
       </S.ContainerLogo>
       <Menu handleLogout={handleLogout} />
     </S.Container>

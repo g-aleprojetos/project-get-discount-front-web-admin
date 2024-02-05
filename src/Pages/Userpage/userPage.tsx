@@ -5,7 +5,7 @@ import * as S from './userPage.styles';
 
 export const UserPage = () => {
   return (
-    <S.Container data-testid={'test-user-page'}>
+    <S.Container data-testid={'test_user_page'}>
       <S.Imagem data-testid={'test_image'} src={manutencao} />
     </S.Container>
   );

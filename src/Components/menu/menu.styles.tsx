@@ -8,14 +8,6 @@ export interface PropsMenu {
   idiomaSelecionado?: boolean;
 }
 
-export const ContainerNav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 89px;
-  padding-right: 55px;
-`;
-
 export const ContainerContent = styled.ul`
   display: flex;
   align-items: center;
@@ -29,6 +21,14 @@ export const ContainerContent = styled.ul`
   height: auto;
   padding-top: 'auto';
   transition: 'none';
+`;
+
+export const ContainerNav = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 89px;
+  padding-right: 55px;
 `;
 
 export const Item = styled.li<PropsMenu>`

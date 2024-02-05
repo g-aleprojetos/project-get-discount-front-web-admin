@@ -17,7 +17,7 @@ export const Header = () => {
   };
 
   const handleOnConfirmarLogout = () => {
-    handleLogout;
+    handleLogout();
     navigate(rotas.Login);
     localStorage.clear();
     const logOut: ILoginResponse = {
@@ -44,7 +44,7 @@ export const Header = () => {
             corTexto: colors.white,
             corBotao: colors.caribbeanGreen,
             aoClicar: () => {
-              handleOnConfirmarLogout;
+              handleOnConfirmarLogout();
             },
           }}
           botaoCancelar={{

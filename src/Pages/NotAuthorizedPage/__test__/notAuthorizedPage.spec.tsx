@@ -11,7 +11,7 @@ describe('NotAuthorizedPage', () => {
 
   describe('Renderização', () => {
     test(`DEVE renderizar a pagina "NotAuthorizedPage"`, () => {
-      const home = componente.getByTestId('test-notAuthorized-page');
+      const home = componente.getByTestId('test_not_authorized_page');
       expect(home).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {

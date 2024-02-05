@@ -17,7 +17,7 @@ import * as S from './app.routes.styles';
 export const WebRotas = () => {
   const {autenticado} = useAuthenticatorContext();
   return (
-    <S.Container data-testid={'test_rotas_privadas'}>
+    <S.Container data-testid={'test_rotas'}>
       {autenticado && <Header />}
       <Routes>
         <Route path="/login" element={<PublicRoutes />}>

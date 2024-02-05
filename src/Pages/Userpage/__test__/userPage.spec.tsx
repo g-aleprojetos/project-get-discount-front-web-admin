@@ -11,7 +11,7 @@ describe('UserPage', () => {
 
   describe('Renderização', () => {
     test(`DEVE renderizar a pagina "UserPage"`, () => {
-      const home = componente.getByTestId('test-user-page');
+      const home = componente.getByTestId('test_user_page');
       expect(home).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {

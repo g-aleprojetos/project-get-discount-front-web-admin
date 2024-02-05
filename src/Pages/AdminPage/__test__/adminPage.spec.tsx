@@ -11,7 +11,7 @@ describe('AdminPage', () => {
 
   describe('Renderização', () => {
     test(`DEVE renderizar a pagina "AdminPage"`, () => {
-      const home = componente.getByTestId('test-admin-page');
+      const home = componente.getByTestId('test_admin_page');
       expect(home).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {

@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import rotas from 'resources/rotas';
-import colors from 'resources/colors';
 import {Roles} from 'resources/interfaces';
 import {TextH2} from 'Components/text';
 import {useAuthenticatorContext} from 'context/authetication';
+import colors from 'resources/colors';
+import rotas from 'resources/rotas';
 import * as S from './menu.styles';
 
 export type Props = S.PropsMenu & {
@@ -34,11 +34,11 @@ export const Menu = (props: Props) => {
               }}>
               {telaAtiva === rotas.AdminPage ? (
                 <TextH2 peso="bold" cursor="default">
-                  Pagina Administrativa
+                  Página Administrativa
                 </TextH2>
               ) : (
                 <TextH2 cursor="pointer" cor={colors.lightgray}>
-                  Pagina Administrativa
+                  Página Administrativa
                 </TextH2>
               )}
             </S.ItemNav>
@@ -49,11 +49,11 @@ export const Menu = (props: Props) => {
               }}>
               {telaAtiva === rotas.UserPage ? (
                 <TextH2 peso="bold" cursor="default">
-                  Cadastrar Usuario
+                  Página Usuario
                 </TextH2>
               ) : (
                 <TextH2 cursor="pointer" cor={colors.lightgray}>
-                  Cadastrar Usuario
+                  Página Usuario
                 </TextH2>
               )}
             </S.ItemNav>
