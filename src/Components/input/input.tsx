@@ -3,7 +3,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 
 import * as S from './input.styles';
-import colors from 'resources/colors';
 
 type EyeIconProps = {
   isVisible: boolean;
@@ -21,7 +20,7 @@ type Props = S.PropsInput & {
 };
 
 export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const {testId, label, tipo = 'text', corlabel = colors.blue} = props;
+  const {testId, label, tipo = 'text', corlabel} = props;
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const tipoPassword = tipo === 'password';

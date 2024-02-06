@@ -1,15 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoginPage.styles BotaoRecuperaSenha DEVE ser igual ao snapshot 1`] = `
+exports[`LoginPage.styles BotaoEnviar DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  margin: 15px;
+}
+
+.c1 {
+  min-width: 200px;
+  background-color: #6495ED;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 60px;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+  data-testid="bnt-pardao"
+>
+  <button
+    className="c1"
+    data-testid="bnt-pardao-button"
+    type="submit"
+  />
+</div>
+`;
+
+exports[`LoginPage.styles ContainerBotaoRecuperaSenha DEVE ser igual ao snapshot 1`] = `
 .c0 {
   background-color: transparent;
   border: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
   cursor: pointer;
 }
 
 <button
+  className="c0"
+/>
+`;
+
+exports[`LoginPage.styles ContainerDireita DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`LoginPage.styles ContainerEsquerda DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: #0000CD;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`LoginPage.styles ContainerRecuperarSenha DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 8px;
+}
+
+<div
   className="c0"
 />
 `;
@@ -34,10 +120,7 @@ exports[`LoginPage.styles Form DEVE ser igual ao snapshot 1`] = `
   min-width: 400px;
   padding: 20px;
   gap: 8px;
-  background-color: #FFFFFF;
   border-color: #000000;
-  border-radius: 20px;
-  box-shadow: 0px 30px 80px 3px black;
 }
 
 <form
@@ -54,14 +137,6 @@ exports[`LoginPage.styles Main DEVE ser igual ao snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background-color: #D3D3d3;
 }
 
@@ -74,7 +149,7 @@ exports[`LoginPage.styles TextoBotao DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 18px;
   font-family: AvertaStd-Regular;
-  color: #000000;
+  color: #FFFFFF;
   margin-top: 0px;
   text-transform: none;
   line-height: 26px;
@@ -89,16 +164,16 @@ exports[`LoginPage.styles TextoBotao DEVE ser igual ao snapshot 1`] = `
 
 exports[`LoginPage.styles TextoRecuperarSenha DEVE ser igual ao snapshot 1`] = `
 .c0 {
-  font-size: 12px;
+  font-size: 16px;
   font-family: AvertaStd-Regular;
   color: #000000;
   margin-top: 0px;
   text-transform: none;
-  line-height: 18px;
+  line-height: 24px;
   cursor: pointer;
 }
 
-<h5
+<h3
   className="c0 "
   cursor="pointer"
 />
@@ -107,8 +182,8 @@ exports[`LoginPage.styles TextoRecuperarSenha DEVE ser igual ao snapshot 1`] = `
 exports[`LoginPage.styles TextoTitulo DEVE ser igual ao snapshot 1`] = `
 .c0 {
   font-size: 24px;
-  font-family: AvertaStd-Regular;
-  color: #3D9DB3;
+  font-family: AvertaStd-Bold;
+  color: #000000;
   margin-top: 0px;
   text-transform: none;
   line-height: 34px;

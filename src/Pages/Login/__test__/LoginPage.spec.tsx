@@ -16,7 +16,7 @@ describe('LoginPage', () => {
     });
 
     test(`DEVE renderizar o titulo da pagina`, () => {
-      const titulo = componente.getByText('Login');
+      const titulo = componente.getByText('LOGIN');
       expect(titulo).toBeDefined();
     });
 

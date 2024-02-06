@@ -5,8 +5,34 @@ import 'jest-styled-components';
 import * as S from '../LoginPage.styles';
 
 describe('LoginPage.styles', () => {
-  test('BotaoRecuperaSenha DEVE ser igual ao snapshot', () => {
-    const container = renderer.create(<S.BotaoRecuperaSenha />).toJSON();
+  test('BotaoEnviar DEVE ser igual ao snapshot', () => {
+    const container = renderer.create(<S.BotaoEnviar />).toJSON();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  test('ContainerBotaoRecuperaSenha DEVE ser igual ao snapshot', () => {
+    const container = renderer
+      .create(<S.ContainerBotaoRecuperaSenha />)
+      .toJSON();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  test('ContainerDireita DEVE ser igual ao snapshot', () => {
+    const container = renderer.create(<S.ContainerDireita />).toJSON();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  test('ContainerEsquerda DEVE ser igual ao snapshot', () => {
+    const container = renderer.create(<S.ContainerEsquerda />).toJSON();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  test('ContainerRecuperarSenha DEVE ser igual ao snapshot', () => {
+    const container = renderer.create(<S.ContainerRecuperarSenha />).toJSON();
 
     expect(container).toMatchSnapshot();
   });
