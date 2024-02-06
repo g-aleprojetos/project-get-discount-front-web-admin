@@ -3,16 +3,15 @@ import {z} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
 import {Input} from 'Components/input';
-import * as S from './LoginPage.styles';
+import * as S from './RecoverPasswordPage.styles';
 
 const loginSchema = z.object({
   email: z.string().email(),
-  senha: z.string().min(8),
 });
 
 type LoginSchema = z.infer<typeof loginSchema>;
 
-export const LoginPage = () => {
+export const RecoverPasswordPage = () => {
   const {register, handleSubmit} = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
   });
@@ -22,41 +21,26 @@ export const LoginPage = () => {
     console.log(data);
   }, []);
 
-  const handleEsqueceuSenha = useCallback(() => {
-    return;
-  }, []);
-
   return (
-    <S.Main data-testid={'loginPage'}>
+    <S.Main data-testid={'recoverPasswordPage'}>
       <S.ContainerEsquerda />
       <S.ContainerDireita>
         <S.Form onSubmit={handleSubmit(handleSubmitLogin)}>
-          <S.TextoTitulo>LOGIN</S.TextoTitulo>
+          <S.ContainerTitulo>
+            <S.TextoTitulo>Recuperar senha</S.TextoTitulo>
+            <S.TextoSubtitulo>
+              Vamos enviar a recuperação de senha por e-mail.
+            </S.TextoSubtitulo>
+          </S.ContainerTitulo>
           <Input
             testId="input-email"
-            label="Seu email"
             tipo="email"
             autoComplete="on"
             placeholder="contato@email.com"
             {...register('email')}
           />
-          <Input
-            testId="input-senha"
-            label="Sua senha"
-            tipo="password"
-            autoComplete="off"
-            placeholder="********"
-            {...register('senha')}
-          />
-          <S.ContainerRecuperarSenha>
-            <S.ContainerBotaoRecuperaSenha
-              data-testid={'botao-recuperar-senha'}
-              onClick={handleEsqueceuSenha}>
-              <S.TextoRecuperarSenha>Esqueceu sua senha?</S.TextoRecuperarSenha>
-            </S.ContainerBotaoRecuperaSenha>
-          </S.ContainerRecuperarSenha>
-          <S.BotaoEnviar testId="bnt-login">
-            <S.TextoBotao>Logar</S.TextoBotao>
+          <S.BotaoEnviar testId="bnt-recuperar-senha">
+            <S.TextoBotao>recuperar minha senha</S.TextoBotao>
           </S.BotaoEnviar>
         </S.Form>
       </S.ContainerDireita>
