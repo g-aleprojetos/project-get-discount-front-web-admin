@@ -1,6 +1,6 @@
 import React from 'react';
 import {RenderResult, render} from '@testing-library/react';
-import {PublicRoutes} from './publicRoutes1';
+import {PublicRoutes} from './publicRoutes';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

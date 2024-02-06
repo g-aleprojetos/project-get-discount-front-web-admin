@@ -1,4 +1,9 @@
-import React, {HTMLInputTypeAttribute, forwardRef, useState} from 'react';
+import React, {
+  HTMLInputTypeAttribute,
+  forwardRef,
+  useEffect,
+  useState,
+} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 
@@ -15,19 +20,35 @@ type Props = S.PropsInput & {
   corlabel?: string;
   value?: string;
   tipo?: HTMLInputTypeAttribute;
-  requered?: boolean;
-  password?: boolean;
+  comIcone?: boolean;
+  deveMostrarSenha?: boolean;
+  handleMostrarSenha?: (x: boolean) => void;
 };
 
 export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const {testId, label, tipo = 'text', corlabel} = props;
+  const {
+    testId,
+    label,
+    tipo = 'text',
+    corlabel,
+    comIcone = true,
+    deveMostrarSenha,
+    handleMostrarSenha,
+  } = props;
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const tipoPassword = tipo === 'password';
   const tipoInput = tipoPassword ? (mostrarSenha ? 'text' : 'password') : tipo;
 
+  useEffect(() => {
+    if (deveMostrarSenha !== undefined) {
+      setMostrarSenha(deveMostrarSenha);
+    }
+  }, [deveMostrarSenha]);
+
   const togglePasswordVisivel = () => {
     setMostrarSenha(!mostrarSenha);
+    handleMostrarSenha?.(!mostrarSenha);
   };
 
   return (
@@ -42,7 +63,7 @@ export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
               {...props}
               ref={ref}
             />
-            {tipoPassword && (
+            {comIcone && tipoPassword && (
               <S.MostrarSenha>
                 <EyeIcon
                   isVisible={mostrarSenha}

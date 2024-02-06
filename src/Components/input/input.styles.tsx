@@ -22,6 +22,7 @@ export const ContainerInputBox = styled.div`
   width: 100%;
   border-radius: 2px;
   border: 1px solid ${colors.shuttleGray};
+  background-color: ${colors.white};
 `;
 
 export const LabelBox = styled.label`

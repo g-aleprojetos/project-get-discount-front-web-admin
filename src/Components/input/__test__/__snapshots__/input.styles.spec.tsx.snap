@@ -48,6 +48,7 @@ exports[`Input.styles ContainerInputBox DEVE ser igual ao snapshot 1`] = `
   width: 100%;
   border-radius: 2px;
   border: 1px solid #545d6A;
+  background-color: #FFFFFF;
 }
 
 <div

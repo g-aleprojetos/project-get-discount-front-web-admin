@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 import cores from 'resources/colors';
 import sizes from 'resources/sizes';
-import {TextH2, TextH5} from 'Components/text';
+import {TextH1, TextH2} from 'Components/text';
 import {Button} from 'Components/button';
 
 export const BotaoEnviar = styled(Button).attrs({
   tipo: 'submit',
   cor: cores.CornflowerBlue,
 })``;
-
-export const ContainerBotaoRecuperaSenha = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-`;
 
 export const ContainerDireita = styled.div`
   display: flex;
@@ -35,7 +29,6 @@ export const ContainerTitulo = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  gap: ${sizes.medium}px;
 `;
 
 export const Form = styled.form`
@@ -63,14 +56,6 @@ export const TextoBotao = styled(TextH2).attrs({
   toUpper: true,
 })``;
 
-export const TextoRecuperarSenha = styled(TextH2).attrs({
-  cor: cores.black,
-  cursor: 'pointer',
-  toUpper: true,
-})``;
-
-export const TextoSubtitulo = styled(TextH5)``;
-
-export const TextoTitulo = styled(TextH2).attrs({
+export const TextoTitulo = styled(TextH1).attrs({
   peso: 'bold',
 })``;
