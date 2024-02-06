@@ -6,6 +6,7 @@ import {Input} from '..';
 describe('Input', () => {
   let componente: RenderResult;
   const labelmock = 'textoLabel';
+  const handleMostrarSenhaMock = jest.fn();
 
   beforeEach(() => {
     componente = render(<Input label={labelmock} />);
@@ -90,6 +91,19 @@ describe('Input', () => {
         const iconeAberto = componente.getByTestId('icone-olho-aberto');
         expect(iconeAberto).toBeDefined();
       });
+
+      test('DEVE renderizar o icone olho aberto QUANDO "deveMostrarsenha" for igual a true', () => {
+        componente.rerender(
+          <Input
+            label={labelmock}
+            tipo="password"
+            deveMostrarSenha={true}
+            handleMostrarSenha={handleMostrarSenhaMock}
+          />,
+        );
+        const iconeAberto = componente.getByTestId('icone-olho-aberto');
+        expect(iconeAberto).toBeDefined();
+      });
     });
   });
 
@@ -105,6 +119,59 @@ describe('Input', () => {
       fireEvent.change(input, {target: {value: 'teste'}});
       fireEvent.change(input, {target: {value: 'teste@email.com'}});
       expect((input as HTMLInputElement).value).toBe('teste@email.com');
+    });
+
+    test('DEVE chamar a função "handleMostrarSenha" QUANDO clicar no icone de "olho fechado"', () => {
+      componente.rerender(
+        <Input
+          label={labelmock}
+          tipo="password"
+          handleMostrarSenha={handleMostrarSenhaMock}
+        />,
+      );
+      const icone = componente.getByTestId('icone-olho-fechado');
+      fireEvent.click(icone);
+      expect(handleMostrarSenhaMock).toHaveBeenCalledTimes(1);
+    });
+
+    test('DEVE chamar a função "handleMostrarSenha" QUANDO clicar no icone de "olho aberto"', () => {
+      componente.rerender(
+        <Input
+          label={labelmock}
+          tipo="password"
+          handleMostrarSenha={handleMostrarSenhaMock}
+        />,
+      );
+      const icone = componente.getByTestId('icone-olho-fechado');
+      fireEvent.click(icone);
+      expect(handleMostrarSenhaMock).toHaveBeenCalledTimes(1);
+    });
+
+    test('DEVE chamar a função "handleMostrarSenha" com o valor "true" QUANDO clicar no icone de "olho fechado"', () => {
+      componente.rerender(
+        <Input
+          label={labelmock}
+          tipo="password"
+          handleMostrarSenha={handleMostrarSenhaMock}
+        />,
+      );
+      const icone = componente.getByTestId('icone-olho-fechado');
+      fireEvent.click(icone);
+      expect(handleMostrarSenhaMock).toHaveBeenCalledWith(true);
+    });
+
+    test('DEVE chamar a função "handleMostrarSenha" com o valor "false" QUANDO clicar no icone de "olho aberto"', () => {
+      componente.rerender(
+        <Input
+          label={labelmock}
+          tipo="password"
+          deveMostrarSenha={true}
+          handleMostrarSenha={handleMostrarSenhaMock}
+        />,
+      );
+      const icone = componente.getByTestId('icone-olho-aberto');
+      fireEvent.click(icone);
+      expect(handleMostrarSenhaMock).toHaveBeenCalledWith(false);
     });
   });
 });

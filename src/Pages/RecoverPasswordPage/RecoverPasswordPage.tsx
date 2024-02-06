@@ -21,6 +21,10 @@ export const RecoverPasswordPage = () => {
     console.log(data);
   }, []);
 
+  const handleVoltarTelaLogin = useCallback(() => {
+    return;
+  }, []);
+
   return (
     <S.Main data-testid={'recoverPasswordPage'}>
       <S.ContainerEsquerda />
@@ -42,6 +46,11 @@ export const RecoverPasswordPage = () => {
           <S.BotaoEnviar testId="bnt-recuperar-senha">
             <S.TextoBotao>recuperar minha senha</S.TextoBotao>
           </S.BotaoEnviar>
+          <S.ContainerBotaoRecuperaSenha
+            data-testid={'botao-recuperar-senha'}
+            onClick={handleVoltarTelaLogin}>
+            <S.TextoRecuperarSenha>Voltar</S.TextoRecuperarSenha>
+          </S.ContainerBotaoRecuperaSenha>
         </S.Form>
       </S.ContainerDireita>
     </S.Main>
