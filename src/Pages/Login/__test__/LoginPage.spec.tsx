@@ -58,8 +58,8 @@ describe('LoginPage', () => {
   describe('Comportamento', () => {
     test('DEVE preencher o valor do email', () => {
       const login = componente.getByLabelText('Seu email');
-      fireEvent.change(login, {target: {value: 'teste@email.com'}});
-      expect((login as HTMLInputElement).value).toBe('teste@email.com');
+      fireEvent.change(login, {target: {value: 'teste@email.com.br'}});
+      expect((login as HTMLInputElement).value).toBe('teste@email.com.br');
     });
 
     test('DEVE preencher o valor da senha', () => {
