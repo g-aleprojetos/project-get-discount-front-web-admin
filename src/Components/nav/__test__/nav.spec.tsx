@@ -2,7 +2,8 @@ import React from 'react';
 import {RenderResult, fireEvent, render} from '@testing-library/react';
 import {useNavigate} from 'react-router-dom';
 import {useAuthenticatorContext} from 'context/authetication';
-import {IUser, Roles} from 'resources/interfaces';
+import {IUser} from 'types/interfaces';
+import {Roles} from 'types/enuns';
 import {Nav} from '../nav';
 
 jest.mock('react-router-dom');

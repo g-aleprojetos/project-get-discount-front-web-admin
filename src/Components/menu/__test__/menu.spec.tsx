@@ -3,8 +3,9 @@ import {fireEvent, render, RenderResult} from '@testing-library/react';
 import {useNavigate} from 'react-router-dom';
 import {useAuthenticatorContext} from 'context/authetication';
 import {Menu} from '../menu';
-import rotas from 'resources/rotas';
-import {IUser, Roles} from 'resources/interfaces';
+import {Roles} from 'types/enuns';
+import {IUser} from 'types/interfaces';
+import rotas from 'types/rotasAPP';
 
 jest.mock('react-router-dom');
 const mockedUseNavigate = useNavigate as jest.Mock;

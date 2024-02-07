@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {Roles} from 'resources/interfaces';
 import {TextH2} from 'Components/text';
 import {useAuthenticatorContext} from 'context/authetication';
+import {Roles} from 'types/enuns';
 import colors from 'resources/colors';
-import rotas from 'resources/rotas';
+import rotas from 'types/rotasAPP';
 import * as S from './menu.styles';
 
 export type Props = S.PropsMenu & {

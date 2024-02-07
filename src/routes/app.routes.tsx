@@ -1,8 +1,7 @@
 import * as React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import rotas from 'resources/rotas';
-
-import {Roles} from 'resources/interfaces';
+import rotas from 'types/rotasAPP';
+import {Roles} from 'types/enuns';
 import {UserPage} from 'Pages/Userpage';
 import {NotAuthorizedPage} from 'Pages/NotAuthorizedPage';
 import {NotFoundPage} from 'Pages/NotFoundPage';
