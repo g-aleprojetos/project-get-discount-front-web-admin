@@ -27,19 +27,22 @@ export const AutenticadoContext = createContext({} as AutenticadorContext);
 export const AutenticadoProvide = ({children}: BackgroundProvider) => {
   const [auth, setAuth] = useState<ILoginResponse>();
   const [usuario, setUsuario] = useState<IUser>();
+
   const handleAutenticado = (token: ILoginResponse) => {
     setAuth(token);
-    const accessToken: IAccessToken = jwtDecode(token.accessToken);
-    setUsuario({
-      id: accessToken.sub,
-      nome: accessToken.nome,
-      role: accessToken.role,
-    });
-    localStorage.setItem('tokens', JSON.stringify(accessToken));
-    localStorage.setItem(
-      'user',
-      JSON.stringify({nome: accessToken.nome, role: accessToken.role}),
-    );
+    if (token.accessToken) {
+      const accessToken: IAccessToken = jwtDecode(token.accessToken);
+      setUsuario({
+        id: accessToken.sub,
+        nome: accessToken.nome,
+        role: accessToken.role,
+      });
+      localStorage.setItem('tokens', JSON.stringify(accessToken));
+      localStorage.setItem(
+        'user',
+        JSON.stringify({nome: accessToken.nome, role: accessToken.role}),
+      );
+    }
   };
 
   return (
@@ -53,6 +56,7 @@ export const AutenticadoProvide = ({children}: BackgroundProvider) => {
     </AutenticadoContext.Provider>
   );
 };
+
 export function useAuthenticatorContext() {
   return useContext(AutenticadoContext);
 }

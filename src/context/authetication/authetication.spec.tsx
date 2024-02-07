@@ -16,7 +16,7 @@ const wrapper = ({children}: AutenticadorProvider) => (
 
 describe('AutenticadorContext', () => {
   const mockToken = {
-    sub: '1234567890',
+    sub: '1234567890ABCDEF',
     nome: 'John Doe',
     role: 'ADMIN',
     exp: Math.floor(Date.now() / 1000) + 60 * 60,
