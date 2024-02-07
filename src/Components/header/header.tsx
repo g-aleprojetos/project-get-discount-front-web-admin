@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import {ILoginResponse} from 'resources/interfaces';
 import {useNavigate} from 'react-router-dom';
-import rotas from 'resources/rotas';
 import {Popup} from 'Components/popup';
-import colors from 'resources/colors';
 import {Nav} from 'Components/nav/nav';
 import {useAuthenticatorContext} from 'context/authetication';
+import {ILoginResponse} from 'infrastructure/api/schemas/response';
+import rotas from 'types/rotasAPP';
+import colors from 'resources/colors';
 import * as S from './header.styles';
 
 export const Header = () => {

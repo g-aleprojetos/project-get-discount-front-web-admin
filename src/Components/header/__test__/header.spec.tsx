@@ -4,8 +4,9 @@ import {fireEvent, render, RenderResult} from '@testing-library/react';
 import {useNavigate} from 'react-router-dom';
 import {useAuthenticatorContext} from 'context/authetication';
 import {Header} from 'Components/header/header';
-import {IUser, Roles} from 'resources/interfaces';
-import rotas from 'resources/rotas';
+import {IUser} from 'types/interfaces';
+import {Roles} from 'types/enuns';
+import rotas from 'types/rotasAPP';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

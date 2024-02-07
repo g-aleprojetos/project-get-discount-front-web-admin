@@ -1,7 +1,7 @@
 export interface ILoginResponse {
-  auth: boolean;
-  accessToken: string;
-  refreshToken: IRefreshToken;
+  auth?: boolean;
+  accessToken?: string;
+  refreshToken?: IRefreshToken;
   mensagem?: string;
 }
 

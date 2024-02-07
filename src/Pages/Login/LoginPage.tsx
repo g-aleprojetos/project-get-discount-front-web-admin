@@ -1,13 +1,14 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {z} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
 import {Input} from 'Components/input';
+import {useLogin} from 'hooks/useLogin';
 import * as S from './LoginPage.styles';
 
 const loginSchema = z.object({
   email: z.string().email(),
-  senha: z.string().min(8),
+  password: z.string().min(8),
 });
 
 type LoginSchema = z.infer<typeof loginSchema>;
@@ -17,10 +18,15 @@ export const LoginPage = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  const handleSubmitLogin = useCallback((data: LoginSchema) => {
-    console.log('login');
-    console.log(data);
-  }, []);
+  const {obter} = useLogin();
+
+  const handleSubmitLogin = useCallback(
+    (data: LoginSchema) => {
+      const {email, password} = data;
+      obter({email, password});
+    },
+    [obter],
+  );
 
   const handleEsqueceuSenha = useCallback(() => {
     return;
@@ -46,7 +52,7 @@ export const LoginPage = () => {
             tipo="password"
             autoComplete="off"
             placeholder="********"
-            {...register('senha')}
+            {...register('password')}
           />
           <S.ContainerRecuperarSenha>
             <S.ContainerBotaoRecuperaSenha

@@ -1,4 +1,4 @@
-import {Roles} from './enuns/roles';
+import {Roles} from 'types/enuns/roles';
 
 export interface IUser {
   id: string;

@@ -20,6 +20,7 @@
     "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
+    "axios": "^1.6.7",
     "coveralls": "^3.1.1",
     "eslint-plugin-react": "^7.31.8",
     "jwt-decode": "^4.0.0",
@@ -65,10 +66,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.23.9",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@types/styled-components": "^5.1.26",
+    "axios-mock-adapter": "^1.22.0",
+    "babel-jest": "^29.7.0",
     "commitizen": "^4.2.5",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "3.3.0",
@@ -79,7 +84,16 @@
     "husky": "^8.0.0",
     "jest-styled-components": "^7.2.0",
     "lint-staged": "^13.0.3",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "react-is": "^16.8.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!axios)"
+    ]
   },
   "config": {
     "commitizen": {
