@@ -1,15 +1,14 @@
 import * as React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import rotas from 'resources/rotas';
-
-import {Roles} from 'resources/interfaces';
+import rotas from 'types/rotasAPP';
+import {Roles} from 'types/enuns';
 import {UserPage} from 'Pages/Userpage';
 import {NotAuthorizedPage} from 'Pages/NotAuthorizedPage';
 import {NotFoundPage} from 'Pages/NotFoundPage';
 import {AdminPage} from 'Pages/AdminPage';
 import {LoginPage} from 'Pages/Login';
-import {PublicRoutes} from 'helpers/PublicRoutes1';
-import {PrivateRoutes} from 'helpers/PrivateRoutes1';
+import {PublicRoutes} from 'helpers/PublicRoutes';
+import {PrivateRoutes} from 'helpers/PrivateRoutes';
 import {useAuthenticatorContext} from 'context/authetication';
 import {Header} from 'Components/header';
 import * as S from './app.routes.styles';

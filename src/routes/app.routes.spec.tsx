@@ -3,7 +3,7 @@ import {RenderResult, render} from '@testing-library/react';
 import {MemoryRouter as Router} from 'react-router-dom';
 import {WebRotas} from './app.routes';
 import {useAuthenticatorContext} from 'context/authetication';
-import {Roles} from 'resources/interfaces';
+import {Roles} from 'types/enuns';
 
 jest.mock('context/authetication', () => ({
   ...jest.requireActual('context/authetication'),

@@ -1,8 +1,8 @@
 import React from 'react';
 import {useLocation, Navigate, Outlet} from 'react-router-dom';
 import {useAuthenticatorContext} from 'context/authetication';
-import {Roles} from 'resources/interfaces';
-import rotas from 'resources/rotas';
+import rotas from 'types/rotasAPP';
+import {Roles} from 'types/enuns';
 
 export const PrivateRoutes = ({roles}: {roles: Array<Roles>}) => {
   const {usuario} = useAuthenticatorContext();

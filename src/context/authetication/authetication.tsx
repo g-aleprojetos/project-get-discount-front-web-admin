@@ -1,6 +1,8 @@
 import React, {createContext, ReactNode, useContext, useState} from 'react';
 import {jwtDecode} from 'jwt-decode';
-import {ILoginResponse, IUser, Roles} from 'resources/interfaces';
+import {Roles} from 'types/enuns';
+import {IUser} from 'types/interfaces';
+import {ILoginResponse} from 'infrastructure/api/schemas/response';
 
 interface IAccessToken {
   sub: string;

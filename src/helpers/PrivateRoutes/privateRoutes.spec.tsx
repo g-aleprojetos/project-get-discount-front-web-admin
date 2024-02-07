@@ -1,10 +1,10 @@
 import React from 'react';
 import {RenderResult, render, waitFor} from '@testing-library/react';
 import {MemoryRouter as Router, Routes, Route} from 'react-router-dom';
-import {PrivateRoutes} from './privateRoutes1';
-import {Roles} from 'resources/interfaces';
-import rotas from 'resources/rotas';
+import {PrivateRoutes} from './privateRoutes';
+import rotas from 'types/rotasAPP';
 import {useAuthenticatorContext} from 'context/authetication';
+import {Roles} from 'types/enuns';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
